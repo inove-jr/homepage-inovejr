@@ -1,1 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;500;600&display=swap");
 @import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-display: "Bricolage Grotesque", sans-serif;
+  --font-sans: "Figtree", sans-serif;
+  --color-navy-900: #1b2a3d;
+  --color-navy-700: #25374e;
+  --color-inove: #fe5822;
+  --color-inove-soft: #fe6c21;
+  --color-paper: #f2f4f7;
+  --color-ink: #0e1621;
+}
