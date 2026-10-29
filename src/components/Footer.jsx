@@ -1,12 +1,12 @@
-type FooterLink = { label: string, href: string }
+import { ArrowRight, Mail, MapPin, Phone } from "lucide-react"
 
-const REDES: { name: string, href: string, icon: string }[] = [
-  { name: "LinkedIn", href: "/", icon: "/linkedin-icon.svg" },
-  { name: "Instagram", href: "/", icon: "/instagram-icon.svg" },
-  { name: "GitHub", href: "/", icon: "/github-icon.svg" },
+const REDES = [
+  { name: "LinkedIn", href: "/", icon: "/linkedin_icon.svg" },
+  { name: "Instagram", href: "/", icon: "/instagram_icon.svg" },
+  { name: "GitHub", href: "/", icon: "/github_icon.svg" },
 ]
 
-const COLUNAS: { title: string, links: FooterLink[] }[] = [
+const COLUNAS = [
   {
     title: "Serviços",
     links: [
@@ -54,9 +54,10 @@ export default function Footer() {
           </h2>
           <a
             href={`mailto:${CONTATO.email}`}
-            className="inline-flex w-fit items-center rounded-full bg-inove px-7 py-3.5 font-semibold text-white transition-colors hover:bg-inove-soft focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+            className="inline-flex w-fit items-center gap-2 rounded-full bg-inove px-7 py-3.5 font-semibold text-white transition-colors hover:bg-inove-soft focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
           >
             Peça um orçamento
+            <ArrowRight className="h-5 w-5" aria-hidden="true" />
           </a>
         </div>
         <div className="h-1 bg-inove" aria-hidden="true" />
@@ -65,7 +66,7 @@ export default function Footer() {
       <div className="bg-paper dark:bg-ink">
         <div className="mx-auto grid max-w-6xl gap-12 px-6 py-14 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
           <div className="md:col-span-2 lg:col-span-1">
-            <img src="/logo i9.svg" alt="Inove Jr." className="h-20 w-20 rounded-2xl dark:bg-white dark:p-2" />
+            <img src="/logo_i9.svg" alt="Inove Jr. logo" className="h-20 w-20 rounded-2xl dark:bg-white dark:p-2" />
             <p className="mt-5 max-w-sm leading-relaxed">
               A Inove Jr. é uma empresa júnior de tecnologia formada por
               estudantes. Desenvolvemos sites, sistemas e aplicativos com
@@ -108,17 +109,22 @@ export default function Footer() {
           <div>
             <h3 className="font-display text-lg font-bold text-navy-900 dark:text-white">Contato</h3>
             <address className="mt-4 space-y-3 not-italic">
-              <p>
+              <p className="flex items-center gap-2">
+                <Mail className="h-4 w-4 shrink-0" aria-hidden="true" />
                 <a href={`mailto:${CONTATO.email}`} className={linkClass}>
                   {CONTATO.email}
                 </a>
               </p>
-              <p>
+              <p className="flex items-center gap-2">
+                <Phone className="h-4 w-4 shrink-0" aria-hidden="true" />
                 <a href={`tel:${CONTATO.telefone.replace(/\D/g, "")}`} className={linkClass}>
                   {CONTATO.telefone}
                 </a>
               </p>
-              <p className="text-navy-700/80 dark:text-slate-300">{CONTATO.endereco}</p>
+              <p className="flex items-center gap-2 text-navy-700/80 dark:text-slate-300">
+                <MapPin className="h-4 w-4 shrink-0" aria-hidden="true" />
+                {CONTATO.endereco}
+              </p>
             </address>
           </div>
         </div>
