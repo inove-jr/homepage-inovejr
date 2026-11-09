@@ -13,3 +13,43 @@
   --color-paper: #f2f4f7;
   --color-ink: #0e1621;
 }
+
+/* Tokens do shadcn/ui mapeados para a identidade da Inove Jr. */
+:root {
+  --background: #f2f4f7;
+  --foreground: #1b2a3d;
+  --primary: #fe5822;
+  --primary-foreground: #ffffff;
+  --secondary: #1b2a3d;
+  --secondary-foreground: #ffffff;
+  --accent: #e4e8ee;
+  --accent-foreground: #1b2a3d;
+  --destructive: #dc2626;
+  --border: rgb(37 55 78 / 0.15);
+  --input: rgb(37 55 78 / 0.2);
+  --ring: #fe5822;
+}
+
+.dark {
+  --background: #0e1621;
+  --foreground: #e2e8f0;
+  --accent: #1b2a3d;
+  --accent-foreground: #ffffff;
+  --border: rgb(255 255 255 / 0.1);
+  --input: rgb(255 255 255 / 0.15);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+}

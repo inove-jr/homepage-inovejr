@@ -1,4 +1,6 @@
 import { ArrowRight, Mail, MapPin, Phone } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Separator } from "@/components/ui/separator"
 
 const REDES = [
   { name: "LinkedIn", href: "/", icon: "/linkedin_icon.svg" },
@@ -52,15 +54,18 @@ export default function Footer() {
           >
             Tem uma ideia? A gente transforma em produto.
           </h2>
-          <a
-            href={`mailto:${CONTATO.email}`}
-            className="inline-flex w-fit items-center gap-2 rounded-full bg-inove px-7 py-3.5 font-semibold text-white transition-colors hover:bg-inove-soft focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+          <Button
+            asChild
+            size="lg"
+            className="h-auto w-fit rounded-full px-7 py-3.5 text-base font-semibold hover:bg-inove-soft focus-visible:ring-white/60"
           >
-            Peça um orçamento
-            <ArrowRight className="h-5 w-5" aria-hidden="true" />
-          </a>
+            <a href={`mailto:${CONTATO.email}`}>
+              Peça um orçamento
+              <ArrowRight className="size-5" aria-hidden="true" />
+            </a>
+          </Button>
         </div>
-        <div className="h-1 bg-inove" aria-hidden="true" />
+        <Separator className="h-1 bg-inove" />
       </div>
 
       <div className="bg-paper dark:bg-ink">
@@ -76,16 +81,22 @@ export default function Footer() {
             <ul className="mt-6 flex gap-3" aria-label="Redes sociais">
               {REDES.map(({ name, href, icon }) => (
                 <li key={name}>
-                  <a
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`Inove Jr. no ${name}`}
-                    title={name}
-                    className="flex h-11 w-11 items-center justify-center rounded-full bg-white shadow-sm ring-1 ring-navy-700/10 transition dark:ring-white/10 hover:-translate-y-0.5 hover:ring-inove focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-inove"
+                  <Button
+                    asChild
+                    variant="outline"
+                    size="icon-lg"
+                    className="size-11 rounded-full bg-white shadow-sm ring-1 ring-navy-700/10 hover:-translate-y-0.5 hover:bg-white hover:ring-inove dark:bg-white dark:ring-white/10 dark:hover:bg-white"
                   >
-                    <img src={icon} alt="" className="h-5 w-5" />
-                  </a>
+                    <a
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Inove Jr. no ${name}`}
+                      title={name}
+                    >
+                      <img src={icon} alt="" className="h-5 w-5" />
+                    </a>
+                  </Button>
                 </li>
               ))}
             </ul>
@@ -131,7 +142,10 @@ export default function Footer() {
       </div>
 
       <div className="bg-paper dark:bg-ink">
-        <div className="mx-auto flex max-w-6xl flex-col gap-3 border-t border-navy-700/15 px-6 py-6 text-sm text-navy-700/70 dark:border-white/10 dark:text-slate-400 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mx-auto max-w-6xl px-6">
+          <Separator />
+        </div>
+        <div className="mx-auto flex max-w-6xl flex-col gap-3 px-6 py-6 text-sm text-navy-700/70 dark:border-white/10 dark:text-slate-400 sm:flex-row sm:items-center sm:justify-between">
           <p>© {year} Inove Jr. Todos os direitos reservados.</p>
           <ul className="flex flex-wrap gap-x-6 gap-y-2">
             <li><a href="#privacidade" className={linkClass}>Privacidade</a></li>
