@@ -5,27 +5,9 @@ import logoUrl from '../assets/logo.png'
 export default function NavBar() {
   return (
     <div>
-      <nav className="
-          bg-[#092435]
-          w-full
-          h-30
-          flex
-          items-center
-          justify-center
-          text-white
-          gap-[5vh]
-
-          sm:bg-[#092435] 
-          sm:w-full 
-          sm:h-30 
-          sm:text-white 
-          sm:flex 
-          sm:items-center 
-          sm:justify-center 
-          sm:gap-[50vh]       
-          ">
+      <nav className=" bg-[#092435] w-full h-20 flex justify-center items-center text-white gap-17 sm:w-full sm:h-30 sm:gap-60">
         <div>
-          <img src={logoUrl} alt="" className=" w-[8vh] h-[8vh] cursor-pointer sm:w-[12vh] sm:h-[12vh] sm:cursor-pointer"/>
+          <img src={logoUrl} alt="" className=" w-12 h-12 sm:w-20 sm:h-20 sm:cursor-pointer"/>
         </div>
 
         <ul className="flex gap-4 text-[0.6rem] sm:text-[0.9rem] sm:flex sm:gap-10">
