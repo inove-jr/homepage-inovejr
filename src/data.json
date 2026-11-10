@@ -1,0 +1,32 @@
+{
+    "redes_sociais": [
+        {
+            "id": 1,
+            "plataforma": "linkedin", 
+            "url": "https://www.linkedin.com/company/inovejr/", 
+            "icone": "linkedin.png",
+            "texto": "Linkedin"
+        },
+        {
+            "id": 2,
+            "plataforma": "github", 
+            "url": "https://github.com/inove-jr", 
+            "icone": "github.png",
+            "texto": "GitHub"
+        },
+        {
+            "id": 3,
+            "plataforma": "whatsapp", 
+            "url": "https://wa.me/558791702552", 
+            "icone": "whatsapp.png",
+            "texto": "Entre em contato"
+        },
+        {
+            "id": 4,
+            "plataforma": "inovejr", 
+            "url": "https://docs.google.com/forms/d/e/1FAIpQLSfvXQH-rSmwZNW2yRDRD5jhIgEyidx5TA2HCV6exSxCXIwLKA/closedform", 
+            "icone": "/povo.png",
+            "texto": "Processo Seletivo"
+        }
+    ]
+}
